@@ -1,0 +1,1366 @@
+[
+  {
+    "codename": "aboriginal_languages_k_10_2022",
+    "slug": "aboriginal-languages-k-10-2022",
+    "name": "Aboriginal Languages K–10",
+    "year": 2022,
+    "kla": "Languages",
+    "stages": [
+      "Early Stage 1",
+      "Stage 1",
+      "Stage 2",
+      "Stage 3",
+      "Stage 4",
+      "Stage 5"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 35,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/languages/aboriginal-languages-k-10-2022/outcomes"
+  },
+  {
+    "codename": "aboriginal_studies_7_10_2024",
+    "slug": "aboriginal-studies-7-10-2024",
+    "name": "Aboriginal Studies 7–10",
+    "year": 2024,
+    "kla": "HSIE",
+    "stages": [
+      "Stage 4",
+      "Stage 5"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 22,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/hsie/aboriginal-studies-7-10-2024/outcomes"
+  },
+  {
+    "codename": "agriculture_11_12_2026",
+    "slug": "agriculture-11-12-2026",
+    "name": "Agriculture 11–12",
+    "year": 2026,
+    "kla": "Technological and Applied Studies",
+    "stages": [
+      "Stage 6"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 30,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/tas/agriculture-11-12-2026/outcomes"
+  },
+  {
+    "codename": "agriculture_life_skills_11_12_2026",
+    "slug": "agriculture-life-skills-11-12-2026",
+    "name": "Agriculture Life Skills 11–12",
+    "year": 2026,
+    "kla": "Technological and Applied Studies",
+    "stages": [
+      "Stage 6"
+    ],
+    "syllabusType": "Life Skills",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 16,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/tas/agriculture-life-skills-11-12-2026/outcomes"
+  },
+  {
+    "codename": "agriculture_technology_7_10_2024",
+    "slug": "agriculture-technology-7-10-2024",
+    "name": "Agriculture Technology 7–10",
+    "year": 2024,
+    "kla": "Technological and Applied Studies",
+    "stages": [
+      "Stage 4",
+      "Stage 5"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 23,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/tas/agriculture-technology-7-10-2024/outcomes"
+  },
+  {
+    "codename": "ancient_history_11_12_2024",
+    "slug": "ancient-history-11-12-2024",
+    "name": "Ancient History 11–12",
+    "year": 2024,
+    "kla": "HSIE",
+    "stages": [
+      "Stage 6"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 29,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/hsie/ancient-history-11-12-2024/outcomes"
+  },
+  {
+    "codename": "ancient_history_ls_11_12_2024",
+    "slug": "ancient-history-ls-11-12-2024",
+    "name": "Ancient History Life Skills 11–12",
+    "year": 2024,
+    "kla": "HSIE",
+    "stages": [
+      "Stage 6"
+    ],
+    "syllabusType": "Life Skills",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 14,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/hsie/ancient-history-ls-11-12-2024/outcomes"
+  },
+  {
+    "codename": "aquatic_technology_7_10_2024",
+    "slug": "aquatic-technology-7-10-2024",
+    "name": "Aquatic Technology 7–10",
+    "year": 2024,
+    "kla": "Technological and Applied Studies",
+    "stages": [
+      "Stage 4",
+      "Stage 5"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 22,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/tas/aquatic-technology-7-10-2024/outcomes"
+  },
+  {
+    "codename": "auslan_k_10_2023",
+    "slug": "auslan-k-10-2023",
+    "name": "Auslan K–10",
+    "year": 2023,
+    "kla": "Languages",
+    "stages": [
+      "Early Stage 1",
+      "Stage 1",
+      "Stage 2",
+      "Stage 3",
+      "Stage 4",
+      "Stage 5"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 28,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/languages/auslan-k-10-2023/outcomes"
+  },
+  {
+    "codename": "biology_11_12_2025",
+    "slug": "biology-11-12-2025",
+    "name": "Biology 11–12",
+    "year": 2025,
+    "kla": "Science",
+    "stages": [
+      "Stage 6"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 49,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/science/biology-11-12-2025/outcomes"
+  },
+  {
+    "codename": "biology_life_skills_11_12_2025",
+    "slug": "biology-life-skills-11-12-2025",
+    "name": "Biology Life Skills 11–12",
+    "year": 2025,
+    "kla": "Science",
+    "stages": [
+      "Stage 6"
+    ],
+    "syllabusType": "Life Skills",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 21,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/science/biology-life-skills-11-12-2025/outcomes"
+  },
+  {
+    "codename": "chemical_world_science_life_skills_11_12_2025",
+    "slug": "chemical-world-science-life-skills-11-12-2025",
+    "name": "Chemical World Science Life Skills 11–12",
+    "year": 2025,
+    "kla": "Science",
+    "stages": [
+      "Stage 6"
+    ],
+    "syllabusType": "Life Skills",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 17,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/science/chemical-world-science-life-skills-11-12-2025/outcomes"
+  },
+  {
+    "codename": "chemistry_11_12_2025",
+    "slug": "chemistry-11-12-2025",
+    "name": "Chemistry 11–12",
+    "year": 2025,
+    "kla": "Science",
+    "stages": [
+      "Stage 6"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 45,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/science/chemistry-11-12-2025/outcomes"
+  },
+  {
+    "codename": "child_studies_7_10_2025",
+    "slug": "child-studies-7-10-2025",
+    "name": "Child Studies 7–10",
+    "year": 2025,
+    "kla": "PDHPE",
+    "stages": [
+      "Stage 4",
+      "Stage 5"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 15,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/pdhpe/child-studies-7-10-2025/outcomes"
+  },
+  {
+    "codename": "classical_languages_k_10_2022",
+    "slug": "classical-languages-k-10-2022",
+    "name": "Classical Languages K–10",
+    "year": 2022,
+    "kla": "Languages",
+    "stages": [
+      "Early Stage 1",
+      "Stage 1",
+      "Stage 2",
+      "Stage 3",
+      "Stage 4",
+      "Stage 5"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 19,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/languages/classical-languages-k-10-2022/outcomes"
+  },
+  {
+    "codename": "commerce_7_10_2024",
+    "slug": "commerce-7-10-2024",
+    "name": "Commerce 7–10",
+    "year": 2024,
+    "kla": "HSIE",
+    "stages": [
+      "Stage 4",
+      "Stage 5"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 23,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/hsie/commerce-7-10-2024/outcomes"
+  },
+  {
+    "codename": "communication_technology_7_10_2025",
+    "slug": "communication-technology-7-10-2025",
+    "name": "Communication Technology 7–10",
+    "year": 2025,
+    "kla": "Technological and Applied Studies",
+    "stages": [
+      "Stage 4",
+      "Stage 5"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 23,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/tas/communication-technology-7-10-2025/outcomes"
+  },
+  {
+    "codename": "computing_technology_7_10_2022",
+    "slug": "computing-technology-7-10-2022",
+    "name": "Computing Technology 7–10",
+    "year": 2022,
+    "kla": "Technological and Applied Studies",
+    "stages": [
+      "Stage 4",
+      "Stage 5"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 21,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/tas/computing-technology-7-10-2022/outcomes"
+  },
+  {
+    "codename": "CTCLS-11_12-2022",
+    "slug": "computing-technology-life-skills-11-12-2022",
+    "name": "Computing Technology Life Skills 11–12",
+    "year": 2022,
+    "kla": "Technological and Applied Studies",
+    "stages": [
+      "Stage 6"
+    ],
+    "syllabusType": "Life Skills",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 13,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/tas/computing-technology-life-skills-11-12-2022/outcomes"
+  },
+  {
+    "codename": "creative_arts_k_6_2024",
+    "slug": "creative-arts-k-6-2024",
+    "name": "Creative Arts K–6",
+    "year": 2024,
+    "kla": "Creative Arts",
+    "stages": [
+      "Early Stage 1",
+      "Stage 1",
+      "Stage 2",
+      "Stage 3"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 17,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/creative-arts/creative-arts-k-6-2024/outcomes"
+  },
+  {
+    "codename": "dance_11_12_2025",
+    "slug": "dance-11-12-2025",
+    "name": "Dance 11–12",
+    "year": 2025,
+    "kla": "Creative Arts",
+    "stages": [
+      "Stage 6"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 37,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/creative-arts/dance-11-12-2025/outcomes"
+  },
+  {
+    "codename": "dance_7_10_2023",
+    "slug": "dance-7-10-2023",
+    "name": "Dance 7–10",
+    "year": 2023,
+    "kla": "Creative Arts",
+    "stages": [
+      "Stage 4",
+      "Stage 5"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 18,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/creative-arts/dance-7-10-2023/outcomes"
+  },
+  {
+    "codename": "dance_life_skills_11_12_2025",
+    "slug": "dance-life-skills-11-12-2025",
+    "name": "Dance Life Skills 11–12",
+    "year": 2025,
+    "kla": "Creative Arts",
+    "stages": [
+      "Stage 6"
+    ],
+    "syllabusType": "Life Skills",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 13,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/creative-arts/dance-life-skills-11-12-2025/outcomes"
+  },
+  {
+    "codename": "design_innovation_technology_7_10_2025",
+    "slug": "design-innovation-technology-7-10-2025",
+    "name": "Design Innovation Technology 7–10",
+    "year": 2025,
+    "kla": "Technological and Applied Studies",
+    "stages": [
+      "Stage 4",
+      "Stage 5"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 23,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/tas/design-innovation-technology-7-10-2025/outcomes"
+  },
+  {
+    "codename": "drama_11_12_2025",
+    "slug": "drama-11-12-2025",
+    "name": "Drama 11–12",
+    "year": 2025,
+    "kla": "Creative Arts",
+    "stages": [
+      "Stage 6"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 30,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/creative-arts/drama-11-12-2025/outcomes"
+  },
+  {
+    "codename": "drama_7_10_2023",
+    "slug": "drama-7-10-2023",
+    "name": "Drama 7–10",
+    "year": 2023,
+    "kla": "Creative Arts",
+    "stages": [
+      "Stage 4",
+      "Stage 5"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 18,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/creative-arts/drama-7-10-2023/outcomes"
+  },
+  {
+    "codename": "drama_life_skills_11_12_2025",
+    "slug": "drama-life-skills-11-12-2025",
+    "name": "Drama Life Skills 11–12",
+    "year": 2025,
+    "kla": "Creative Arts",
+    "stages": [
+      "Stage 6"
+    ],
+    "syllabusType": "Life Skills",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 12,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/creative-arts/drama-life-skills-11-12-2025/outcomes"
+  },
+  {
+    "codename": "earth_and_environmental_science_11_12_2025",
+    "slug": "earth-and-environmental-science-11-12-2025",
+    "name": "Earth and Environmental Science 11–12",
+    "year": 2025,
+    "kla": "Science",
+    "stages": [
+      "Stage 6"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 46,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/science/earth-and-environmental-science-11-12-2025/outcomes"
+  },
+  {
+    "codename": "earth_and_environmental_science_life_skills_11_12_2025",
+    "slug": "earth-and-environmental-science-life-skills-11-12-2025",
+    "name": "Earth and Environmental Science Life Skills 11–12",
+    "year": 2025,
+    "kla": "Science",
+    "stages": [
+      "Stage 6"
+    ],
+    "syllabusType": "Life Skills",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 18,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/science/earth-and-environmental-science-life-skills-11-12-2025/outcomes"
+  },
+  {
+    "codename": "economics_11_12_2025",
+    "slug": "economics-11-12-2025",
+    "name": "Economics 11–12",
+    "year": 2025,
+    "kla": "HSIE",
+    "stages": [
+      "Stage 6"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 20,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/hsie/economics-11-12-2025/outcomes"
+  },
+  {
+    "codename": "engineering_technology_7_10_2024",
+    "slug": "engineering-technology-7-10-2024",
+    "name": "Engineering Technology 7–10",
+    "year": 2024,
+    "kla": "Technological and Applied Studies",
+    "stages": [
+      "Stage 4",
+      "Stage 5"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 21,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/tas/engineering-technology-7-10-2024/outcomes"
+  },
+  {
+    "codename": "english_advanced_11_12_2024",
+    "slug": "english-advanced-11-12-2024",
+    "name": "English Advanced 11–12",
+    "year": 2024,
+    "kla": "English",
+    "stages": [
+      "Stage 6"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 12,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/english/english-advanced-11-12-2024/outcomes"
+  },
+  {
+    "codename": "english_eald_11_12_2024",
+    "slug": "english-eald-11-12-2024",
+    "name": "English EAL/D 11–12",
+    "year": 2024,
+    "kla": "English",
+    "stages": [
+      "Stage 6"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 12,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/english/english-eald-11-12-2024/outcomes"
+  },
+  {
+    "codename": "english_extension_11_12_2024",
+    "slug": "english-extension-11-12-2024",
+    "name": "English Extension 11–12",
+    "year": 2024,
+    "kla": "English",
+    "stages": [
+      "Stage 6"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 18,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/english/english-extension-11-12-2024/outcomes"
+  },
+  {
+    "codename": "english_k_10_2022",
+    "slug": "english-k-10-2022",
+    "name": "English K–10",
+    "year": 2022,
+    "kla": "English",
+    "stages": [
+      "Early Stage 1",
+      "Stage 1",
+      "Stage 2",
+      "Stage 3",
+      "Stage 4",
+      "Stage 5"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 61,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/english/english-k-10-2022/outcomes"
+  },
+  {
+    "codename": "english_life_skills_11_12_2024",
+    "slug": "english-life-skills-11-12-2024",
+    "name": "English Life Skills 11–12",
+    "year": 2024,
+    "kla": "English",
+    "stages": [
+      "Stage 6"
+    ],
+    "syllabusType": "Life Skills",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 11,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/english/english-life-skills-11-12-2024/outcomes"
+  },
+  {
+    "codename": "english_standard_11_12_2024",
+    "slug": "english-standard-11-12-2024",
+    "name": "English Standard 11–12",
+    "year": 2024,
+    "kla": "English",
+    "stages": [
+      "Stage 6"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 23,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/english/english-standard-11-12-2024/outcomes"
+  },
+  {
+    "codename": "english_studies_11_12_2024",
+    "slug": "english-studies-11-12-2024",
+    "name": "English Studies 11–12",
+    "year": 2024,
+    "kla": "English",
+    "stages": [
+      "Stage 6"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 21,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/english/english-studies-11-12-2024/outcomes"
+  },
+  {
+    "codename": "ENT-11_12-2022",
+    "slug": "enterprise-computing-11-12-2022",
+    "name": "Enterprise Computing 11–12",
+    "year": 2022,
+    "kla": "Technological and Applied Studies",
+    "stages": [
+      "Stage 6"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 35,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/tas/enterprise-computing-11-12-2022/outcomes"
+  },
+  {
+    "codename": "food_technology_7_10_2025",
+    "slug": "food-technology-7-10-2025",
+    "name": "Food Technology 7–10",
+    "year": 2025,
+    "kla": "Technological and Applied Studies",
+    "stages": [
+      "Stage 4",
+      "Stage 5"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 20,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/tas/food-technology-7-10-2025/outcomes"
+  },
+  {
+    "codename": "GEO-11_12-2022",
+    "slug": "geography-11-12-2022",
+    "name": "Geography 11–12",
+    "year": 2022,
+    "kla": "HSIE",
+    "stages": [
+      "Stage 6"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 30,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/hsie/geography-11-12-2022/outcomes"
+  },
+  {
+    "codename": "geography_7_10_2024",
+    "slug": "geography-7-10-2024",
+    "name": "Geography 7–10",
+    "year": 2024,
+    "kla": "HSIE",
+    "stages": [
+      "Stage 4",
+      "Stage 5"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 26,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/hsie/geography-7-10-2024/outcomes"
+  },
+  {
+    "codename": "geography_elective_7_10_2025",
+    "slug": "geography-elective-7-10-2025",
+    "name": "Geography Elective 7–10",
+    "year": 2025,
+    "kla": "HSIE",
+    "stages": [
+      "Stage 4",
+      "Stage 5"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 23,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/hsie/geography-elective-7-10-2025/outcomes"
+  },
+  {
+    "codename": "GEOLS-11_12-2022",
+    "slug": "geography-life-skills-11-12-2022",
+    "name": "Geography Life Skills 11–12",
+    "year": 2022,
+    "kla": "HSIE",
+    "stages": [
+      "Stage 6"
+    ],
+    "syllabusType": "Life Skills",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 12,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/hsie/geography-life-skills-11-12-2022/outcomes"
+  },
+  {
+    "codename": "HMS-11_12-2023",
+    "slug": "health-and-movement-science-11-12-2023",
+    "name": "Health and Movement Science 11–12",
+    "year": 2023,
+    "kla": "PDHPE",
+    "stages": [
+      "Stage 6"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 41,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/pdhpe/health-and-movement-science-11-12-2023/outcomes"
+  },
+  {
+    "codename": "HMSLS-11_12-2023",
+    "slug": "health-and-movement-science-life-skills-11-12-2023",
+    "name": "Health and Movement Science Life Skills 11–12",
+    "year": 2023,
+    "kla": "PDHPE",
+    "stages": [
+      "Stage 6"
+    ],
+    "syllabusType": "Life Skills",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 21,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/pdhpe/health-and-movement-science-life-skills-11-12-2023/outcomes"
+  },
+  {
+    "codename": "history_7_10_2024",
+    "slug": "history-7-10-2024",
+    "name": "History 7–10",
+    "year": 2024,
+    "kla": "HSIE",
+    "stages": [
+      "Stage 5",
+      "Stage 4"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 31,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/hsie/history-7-10-2024/outcomes"
+  },
+  {
+    "codename": "history_elective_7_10_2025",
+    "slug": "history-elective-7-10-2025",
+    "name": "History Elective 7–10",
+    "year": 2025,
+    "kla": "HSIE",
+    "stages": [
+      "Stage 4",
+      "Stage 5"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 19,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/hsie/history-elective-7-10-2025/outcomes"
+  },
+  {
+    "codename": "history_extension_11_12_2024",
+    "slug": "history-extension-11-12-2024",
+    "name": "History Extension 11–12",
+    "year": 2024,
+    "kla": "HSIE",
+    "stages": [
+      "Stage 6"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 4,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/hsie/history-extension-11-12-2024/outcomes"
+  },
+  {
+    "codename": "hsie_k_6_2024",
+    "slug": "hsie-k-6-2024",
+    "name": "Human Society and its Environment K–6",
+    "year": 2024,
+    "kla": "HSIE",
+    "stages": [
+      "Early Stage 1",
+      "Stage 1",
+      "Stage 2",
+      "Stage 3"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 14,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/hsie/hsie-k-6-2024/outcomes"
+  },
+  {
+    "codename": "industrial_technology_7_10_2025",
+    "slug": "industrial-technology-7-10-2025",
+    "name": "Industrial Technology 7–10",
+    "year": 2025,
+    "kla": "Technological and Applied Studies",
+    "stages": [
+      "Stage 4",
+      "Stage 5"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 23,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/tas/industrial-technology-7-10-2025/outcomes"
+  },
+  {
+    "codename": "law_and_the_community_life_skills_11_12_2025",
+    "slug": "law-and-the-community-life-skills-11-12-2025",
+    "name": "Law and the Community Life Skills 11–12",
+    "year": 2025,
+    "kla": "HSIE",
+    "stages": [
+      "Stage 6"
+    ],
+    "syllabusType": "Life Skills",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 12,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/hsie/law-and-the-community-life-skills-11-12-2025/outcomes"
+  },
+  {
+    "codename": "legal_studies_11_12_2025",
+    "slug": "legal-studies-11-12-2025",
+    "name": "Legal Studies 11–12",
+    "year": 2025,
+    "kla": "HSIE",
+    "stages": [
+      "Stage 6"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 28,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/hsie/legal-studies-11-12-2025/outcomes"
+  },
+  {
+    "codename": "mathematics_advanced_11_12_2024",
+    "slug": "mathematics-advanced-11-12-2024",
+    "name": "Mathematics Advanced 11–12",
+    "year": 2024,
+    "kla": "Mathematics",
+    "stages": [
+      "Stage 6"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 19,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/mathematics/mathematics-advanced-11-12-2024/outcomes"
+  },
+  {
+    "codename": "mathematics_extension_1_11_12_2024",
+    "slug": "mathematics-extension-1-11-12-2024",
+    "name": "Mathematics Extension 1 11–12",
+    "year": 2024,
+    "kla": "Mathematics",
+    "stages": [
+      "Stage 6"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 12,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/mathematics/mathematics-extension-1-11-12-2024/outcomes"
+  },
+  {
+    "codename": "mathematics_extension_2_11_12_2024",
+    "slug": "mathematics-extension-2-11-12-2024",
+    "name": "Mathematics Extension 2 11–12",
+    "year": 2024,
+    "kla": "Mathematics",
+    "stages": [
+      "Stage 6"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 6,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/mathematics/mathematics-extension-2-11-12-2024/outcomes"
+  },
+  {
+    "codename": "mathematics_k_10_2022",
+    "slug": "mathematics-k-10-2022",
+    "name": "Mathematics K–10",
+    "year": 2022,
+    "kla": "Mathematics",
+    "stages": [
+      "Stage 1",
+      "Stage 2",
+      "Stage 3",
+      "Stage 4",
+      "Stage 5",
+      "Early Stage 1"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 153,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/mathematics/mathematics-k-10-2022/outcomes"
+  },
+  {
+    "codename": "mathematics_life_skills_11_12_2024",
+    "slug": "mathematics-life-skills-11-12-2024",
+    "name": "Mathematics Life Skills 11–12",
+    "year": 2024,
+    "kla": "Mathematics",
+    "stages": [
+      "Stage 6"
+    ],
+    "syllabusType": "Life Skills",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 17,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/mathematics/mathematics-life-skills-11-12-2024/outcomes"
+  },
+  {
+    "codename": "mathematics_standard_11_12_2024",
+    "slug": "mathematics-standard-11-12-2024",
+    "name": "Mathematics Standard 11–12",
+    "year": 2024,
+    "kla": "Mathematics",
+    "stages": [
+      "Stage 6"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 42,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/mathematics/mathematics-standard-11-12-2024/outcomes"
+  },
+  {
+    "codename": "modern_history_11_12_2024",
+    "slug": "modern-history-11-12-2024",
+    "name": "Modern History 11–12",
+    "year": 2024,
+    "kla": "HSIE",
+    "stages": [
+      "Stage 6"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 29,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/hsie/modern-history-11-12-2024/outcomes"
+  },
+  {
+    "codename": "modern_history_ls_11_12_2024",
+    "slug": "modern-history-ls-11-12-2024",
+    "name": "Modern History Life Skills 11–12",
+    "year": 2024,
+    "kla": "HSIE",
+    "stages": [
+      "Stage 6"
+    ],
+    "syllabusType": "Life Skills",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 14,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/hsie/modern-history-ls-11-12-2024/outcomes"
+  },
+  {
+    "codename": "modern_languages_k_10_2022",
+    "slug": "modern-languages-k-10-2022",
+    "name": "Modern Languages K–10",
+    "year": 2022,
+    "kla": "Languages",
+    "stages": [
+      "Early Stage 1",
+      "Stage 1",
+      "Stage 2",
+      "Stage 3",
+      "Stage 4",
+      "Stage 5"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 21,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/languages/modern-languages-k-10-2022/outcomes"
+  },
+  {
+    "codename": "music_1_11_12_2025",
+    "slug": "music-1-11-12-2025",
+    "name": "Music 1 11–12",
+    "year": 2025,
+    "kla": "Creative Arts",
+    "stages": [
+      "Stage 6"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 20,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/creative-arts/music-1-11-12-2025/outcomes"
+  },
+  {
+    "codename": "music_2_11_12_2025",
+    "slug": "music-2-11-12-2025",
+    "name": "Music 2 11–12",
+    "year": 2025,
+    "kla": "Creative Arts",
+    "stages": [
+      "Stage 6"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 12,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/creative-arts/music-2-11-12-2025/outcomes"
+  },
+  {
+    "codename": "music_7_10_2024",
+    "slug": "music-7-10-2024",
+    "name": "Music 7–10",
+    "year": 2024,
+    "kla": "Creative Arts",
+    "stages": [
+      "Stage 5",
+      "Stage 4"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 17,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/creative-arts/music-7-10-2024/outcomes"
+  },
+  {
+    "codename": "music_extension_11_12_2025",
+    "slug": "music-extension-11-12-2025",
+    "name": "Music Extension 11–12",
+    "year": 2025,
+    "kla": "Creative Arts",
+    "stages": [
+      "Stage 6"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 8,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/creative-arts/music-extension-11-12-2025/outcomes"
+  },
+  {
+    "codename": "music_life_skills_11_12_2025",
+    "slug": "music-life-skills-11-12-2025",
+    "name": "Music Life Skills 11–12",
+    "year": 2025,
+    "kla": "Creative Arts",
+    "stages": [
+      "Stage 6"
+    ],
+    "syllabusType": "Life Skills",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 8,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/creative-arts/music-life-skills-11-12-2025/outcomes"
+  },
+  {
+    "codename": "pdhpe_7_10_2024",
+    "slug": "pdhpe-7-10-2024",
+    "name": "Personal Development, Health and Physical Education 7–10",
+    "year": 2024,
+    "kla": "PDHPE",
+    "stages": [
+      "Stage 4",
+      "Stage 5"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 28,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/pdhpe/pdhpe-7-10-2024/outcomes"
+  },
+  {
+    "codename": "pdhpe_k_6_2024",
+    "slug": "pdhpe-k-6-2024",
+    "name": "Personal Development, Health and Physical Education K–6",
+    "year": 2024,
+    "kla": "PDHPE",
+    "stages": [
+      "Stage 1",
+      "Stage 2",
+      "Stage 3",
+      "Early Stage 1"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 19,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/pdhpe/pdhpe-k-6-2024/outcomes"
+  },
+  {
+    "codename": "photography_film_and_digital_media_7_10_2025",
+    "slug": "photography-film-and-digital-media-7-10-2025",
+    "name": "Photography, Film and Digital Media 7–10",
+    "year": 2025,
+    "kla": "Creative Arts",
+    "stages": [
+      "Stage 4",
+      "Stage 5"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 15,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/creative-arts/photography-film-and-digital-media-7-10-2025/outcomes"
+  },
+  {
+    "codename": "physical_activity_and_sports_science_7_10_2025",
+    "slug": "physical-activity-and-sports-science-7-10-2025",
+    "name": "Physical Activity and Sports Science 7–10",
+    "year": 2025,
+    "kla": "PDHPE",
+    "stages": [
+      "Stage 4",
+      "Stage 5"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 25,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/pdhpe/physical-activity-and-sports-science-7-10-2025/outcomes"
+  },
+  {
+    "codename": "physical_world_science_life_skills_11_12_2025",
+    "slug": "physical-world-science-life-skills-11-12-2025",
+    "name": "Physical World Science Life Skills 11–12",
+    "year": 2025,
+    "kla": "Science",
+    "stages": [
+      "Stage 6"
+    ],
+    "syllabusType": "Life Skills",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 21,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/science/physical-world-science-life-skills-11-12-2025/outcomes"
+  },
+  {
+    "codename": "physics_11_12_2025",
+    "slug": "physics-11-12-2025",
+    "name": "Physics 11–12",
+    "year": 2025,
+    "kla": "Science",
+    "stages": [
+      "Stage 6"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 49,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/science/physics-11-12-2025/outcomes"
+  },
+  {
+    "codename": "science_7_10_2023",
+    "slug": "science-7-10-2023",
+    "name": "Science 7–10",
+    "year": 2023,
+    "kla": "Science",
+    "stages": [
+      "Stage 4",
+      "Stage 5"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 57,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/science/science-7-10-2023/outcomes"
+  },
+  {
+    "codename": "science_and_technology_k_6_2024",
+    "slug": "science-and-technology-k-6-2024",
+    "name": "Science and Technology K–6",
+    "year": 2024,
+    "kla": "Science",
+    "stages": [
+      "Early Stage 1",
+      "Stage 1",
+      "Stage 2",
+      "Stage 3"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 18,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/science/science-and-technology-k-6-2024/outcomes"
+  },
+  {
+    "codename": "SWE-11_12-2022",
+    "slug": "software-engineering-11-12-2022",
+    "name": "Software Engineering 11–12",
+    "year": 2022,
+    "kla": "Technological and Applied Studies",
+    "stages": [
+      "Stage 6"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 18,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/tas/software-engineering-11-12-2022/outcomes"
+  },
+  {
+    "codename": "technology_man_7_8_2023",
+    "slug": "technology-7-8-2023",
+    "name": "Technology 7–8",
+    "year": 2023,
+    "kla": "Technological and Applied Studies",
+    "stages": [
+      "Stage 4"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 19,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/tas/technology-7-8-2023/outcomes"
+  },
+  {
+    "codename": "textiles_technology_7_10_2025",
+    "slug": "textiles-technology-7-10-2025",
+    "name": "Textiles Technology 7–10",
+    "year": 2025,
+    "kla": "Technological and Applied Studies",
+    "stages": [
+      "Stage 4",
+      "Stage 5"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 23,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/tas/textiles-technology-7-10-2025/outcomes"
+  },
+  {
+    "codename": "visual_and_motion_design_7_10_2025",
+    "slug": "visual-and-motion-design-7-10-2025",
+    "name": "Visual and Motion Design 7–10",
+    "year": 2025,
+    "kla": "Creative Arts",
+    "stages": [
+      "Stage 4",
+      "Stage 5"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 15,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/creative-arts/visual-and-motion-design-7-10-2025/outcomes"
+  },
+  {
+    "codename": "visual_arts_7_10_2024",
+    "slug": "visual-arts-7-10-2024",
+    "name": "Visual Arts 7–10",
+    "year": 2024,
+    "kla": "Creative Arts",
+    "stages": [
+      "Stage 4",
+      "Stage 5"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 20,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/creative-arts/visual-arts-7-10-2024/outcomes"
+  },
+  {
+    "codename": "work_education_7_10_2025",
+    "slug": "work-education-7-10-2025",
+    "name": "Work Education 7–10",
+    "year": 2025,
+    "kla": "HSIE",
+    "stages": [
+      "Stage 4",
+      "Stage 5"
+    ],
+    "syllabusType": "Mainstream",
+    "relatedLifeSkillsSyllabus": null,
+    "outcomesCount": 23,
+    "status": "ok",
+    "lastFetched": "2026-09-05T12:13:58.506Z",
+    "sourceUrl": "https://curriculum.nsw.edu.au/learning-areas/hsie/work-education-7-10-2025/outcomes"
+  }
+]

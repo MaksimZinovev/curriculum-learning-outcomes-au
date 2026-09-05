@@ -1,0 +1,425 @@
+{
+  "fetchedAt": "2026-09-05T12:13:58.507Z",
+  "buildId": "digital-curriculum-next-6e174blwi-nesa.vercel.app",
+  "totalOutcomes": 1682,
+  "mainstreamCount": 1068,
+  "lifeSkillsCount": 614,
+  "dedupe": {
+    "uniqueRecords": 1682,
+    "duplicatesSkipped": 250,
+    "conflicts": 0
+  },
+  "gate": {
+    "previousTotal": 1682,
+    "ratio": 1
+  },
+  "staleRowsKept": 0,
+  "perSyllabus": [
+    {
+      "slug": "aboriginal-languages-k-10-2022",
+      "status": "ok",
+      "outcomesCount": 35
+    },
+    {
+      "slug": "aboriginal-studies-7-10-2024",
+      "status": "ok",
+      "outcomesCount": 22
+    },
+    {
+      "slug": "agriculture-11-12-2026",
+      "status": "ok",
+      "outcomesCount": 30
+    },
+    {
+      "slug": "agriculture-life-skills-11-12-2026",
+      "status": "ok",
+      "outcomesCount": 16
+    },
+    {
+      "slug": "agriculture-technology-7-10-2024",
+      "status": "ok",
+      "outcomesCount": 23
+    },
+    {
+      "slug": "ancient-history-11-12-2024",
+      "status": "ok",
+      "outcomesCount": 29
+    },
+    {
+      "slug": "ancient-history-ls-11-12-2024",
+      "status": "ok",
+      "outcomesCount": 14
+    },
+    {
+      "slug": "aquatic-technology-7-10-2024",
+      "status": "ok",
+      "outcomesCount": 22
+    },
+    {
+      "slug": "auslan-k-10-2023",
+      "status": "ok",
+      "outcomesCount": 28
+    },
+    {
+      "slug": "biology-11-12-2025",
+      "status": "ok",
+      "outcomesCount": 49
+    },
+    {
+      "slug": "biology-life-skills-11-12-2025",
+      "status": "ok",
+      "outcomesCount": 21
+    },
+    {
+      "slug": "chemical-world-science-life-skills-11-12-2025",
+      "status": "ok",
+      "outcomesCount": 17
+    },
+    {
+      "slug": "chemistry-11-12-2025",
+      "status": "ok",
+      "outcomesCount": 45
+    },
+    {
+      "slug": "child-studies-7-10-2025",
+      "status": "ok",
+      "outcomesCount": 15
+    },
+    {
+      "slug": "classical-languages-k-10-2022",
+      "status": "ok",
+      "outcomesCount": 19
+    },
+    {
+      "slug": "commerce-7-10-2024",
+      "status": "ok",
+      "outcomesCount": 23
+    },
+    {
+      "slug": "communication-technology-7-10-2025",
+      "status": "ok",
+      "outcomesCount": 23
+    },
+    {
+      "slug": "computing-technology-7-10-2022",
+      "status": "ok",
+      "outcomesCount": 21
+    },
+    {
+      "slug": "computing-technology-life-skills-11-12-2022",
+      "status": "ok",
+      "outcomesCount": 13
+    },
+    {
+      "slug": "creative-arts-k-6-2024",
+      "status": "ok",
+      "outcomesCount": 17
+    },
+    {
+      "slug": "dance-11-12-2025",
+      "status": "ok",
+      "outcomesCount": 37
+    },
+    {
+      "slug": "dance-7-10-2023",
+      "status": "ok",
+      "outcomesCount": 18
+    },
+    {
+      "slug": "dance-life-skills-11-12-2025",
+      "status": "ok",
+      "outcomesCount": 13
+    },
+    {
+      "slug": "design-innovation-technology-7-10-2025",
+      "status": "ok",
+      "outcomesCount": 23
+    },
+    {
+      "slug": "drama-11-12-2025",
+      "status": "ok",
+      "outcomesCount": 30
+    },
+    {
+      "slug": "drama-7-10-2023",
+      "status": "ok",
+      "outcomesCount": 18
+    },
+    {
+      "slug": "drama-life-skills-11-12-2025",
+      "status": "ok",
+      "outcomesCount": 12
+    },
+    {
+      "slug": "earth-and-environmental-science-11-12-2025",
+      "status": "ok",
+      "outcomesCount": 46
+    },
+    {
+      "slug": "earth-and-environmental-science-life-skills-11-12-2025",
+      "status": "ok",
+      "outcomesCount": 18
+    },
+    {
+      "slug": "economics-11-12-2025",
+      "status": "ok",
+      "outcomesCount": 20
+    },
+    {
+      "slug": "engineering-technology-7-10-2024",
+      "status": "ok",
+      "outcomesCount": 21
+    },
+    {
+      "slug": "english-advanced-11-12-2024",
+      "status": "ok",
+      "outcomesCount": 12
+    },
+    {
+      "slug": "english-eald-11-12-2024",
+      "status": "ok",
+      "outcomesCount": 12
+    },
+    {
+      "slug": "english-extension-11-12-2024",
+      "status": "ok",
+      "outcomesCount": 18
+    },
+    {
+      "slug": "english-k-10-2022",
+      "status": "ok",
+      "outcomesCount": 61
+    },
+    {
+      "slug": "english-life-skills-11-12-2024",
+      "status": "ok",
+      "outcomesCount": 11
+    },
+    {
+      "slug": "english-standard-11-12-2024",
+      "status": "ok",
+      "outcomesCount": 23
+    },
+    {
+      "slug": "english-studies-11-12-2024",
+      "status": "ok",
+      "outcomesCount": 21
+    },
+    {
+      "slug": "enterprise-computing-11-12-2022",
+      "status": "ok",
+      "outcomesCount": 35
+    },
+    {
+      "slug": "food-technology-7-10-2025",
+      "status": "ok",
+      "outcomesCount": 20
+    },
+    {
+      "slug": "geography-11-12-2022",
+      "status": "ok",
+      "outcomesCount": 30
+    },
+    {
+      "slug": "geography-7-10-2024",
+      "status": "ok",
+      "outcomesCount": 26
+    },
+    {
+      "slug": "geography-elective-7-10-2025",
+      "status": "ok",
+      "outcomesCount": 23
+    },
+    {
+      "slug": "geography-life-skills-11-12-2022",
+      "status": "ok",
+      "outcomesCount": 12
+    },
+    {
+      "slug": "health-and-movement-science-11-12-2023",
+      "status": "ok",
+      "outcomesCount": 41
+    },
+    {
+      "slug": "health-and-movement-science-life-skills-11-12-2023",
+      "status": "ok",
+      "outcomesCount": 21
+    },
+    {
+      "slug": "history-7-10-2024",
+      "status": "ok",
+      "outcomesCount": 31
+    },
+    {
+      "slug": "history-elective-7-10-2025",
+      "status": "ok",
+      "outcomesCount": 19
+    },
+    {
+      "slug": "history-extension-11-12-2024",
+      "status": "ok",
+      "outcomesCount": 4
+    },
+    {
+      "slug": "hsie-k-6-2024",
+      "status": "ok",
+      "outcomesCount": 14
+    },
+    {
+      "slug": "industrial-technology-7-10-2025",
+      "status": "ok",
+      "outcomesCount": 23
+    },
+    {
+      "slug": "law-and-the-community-life-skills-11-12-2025",
+      "status": "ok",
+      "outcomesCount": 12
+    },
+    {
+      "slug": "legal-studies-11-12-2025",
+      "status": "ok",
+      "outcomesCount": 28
+    },
+    {
+      "slug": "mathematics-advanced-11-12-2024",
+      "status": "ok",
+      "outcomesCount": 19
+    },
+    {
+      "slug": "mathematics-extension-1-11-12-2024",
+      "status": "ok",
+      "outcomesCount": 12
+    },
+    {
+      "slug": "mathematics-extension-2-11-12-2024",
+      "status": "ok",
+      "outcomesCount": 6
+    },
+    {
+      "slug": "mathematics-k-10-2022",
+      "status": "ok",
+      "outcomesCount": 153
+    },
+    {
+      "slug": "mathematics-life-skills-11-12-2024",
+      "status": "ok",
+      "outcomesCount": 17
+    },
+    {
+      "slug": "mathematics-standard-11-12-2024",
+      "status": "ok",
+      "outcomesCount": 42
+    },
+    {
+      "slug": "modern-history-11-12-2024",
+      "status": "ok",
+      "outcomesCount": 29
+    },
+    {
+      "slug": "modern-history-ls-11-12-2024",
+      "status": "ok",
+      "outcomesCount": 14
+    },
+    {
+      "slug": "modern-languages-k-10-2022",
+      "status": "ok",
+      "outcomesCount": 21
+    },
+    {
+      "slug": "music-1-11-12-2025",
+      "status": "ok",
+      "outcomesCount": 20
+    },
+    {
+      "slug": "music-2-11-12-2025",
+      "status": "ok",
+      "outcomesCount": 12
+    },
+    {
+      "slug": "music-7-10-2024",
+      "status": "ok",
+      "outcomesCount": 17
+    },
+    {
+      "slug": "music-extension-11-12-2025",
+      "status": "ok",
+      "outcomesCount": 8
+    },
+    {
+      "slug": "music-life-skills-11-12-2025",
+      "status": "ok",
+      "outcomesCount": 8
+    },
+    {
+      "slug": "pdhpe-7-10-2024",
+      "status": "ok",
+      "outcomesCount": 28
+    },
+    {
+      "slug": "pdhpe-k-6-2024",
+      "status": "ok",
+      "outcomesCount": 19
+    },
+    {
+      "slug": "photography-film-and-digital-media-7-10-2025",
+      "status": "ok",
+      "outcomesCount": 15
+    },
+    {
+      "slug": "physical-activity-and-sports-science-7-10-2025",
+      "status": "ok",
+      "outcomesCount": 25
+    },
+    {
+      "slug": "physical-world-science-life-skills-11-12-2025",
+      "status": "ok",
+      "outcomesCount": 21
+    },
+    {
+      "slug": "physics-11-12-2025",
+      "status": "ok",
+      "outcomesCount": 49
+    },
+    {
+      "slug": "science-7-10-2023",
+      "status": "ok",
+      "outcomesCount": 57
+    },
+    {
+      "slug": "science-and-technology-k-6-2024",
+      "status": "ok",
+      "outcomesCount": 18
+    },
+    {
+      "slug": "software-engineering-11-12-2022",
+      "status": "ok",
+      "outcomesCount": 18
+    },
+    {
+      "slug": "technology-7-8-2023",
+      "status": "ok",
+      "outcomesCount": 19
+    },
+    {
+      "slug": "textiles-technology-7-10-2025",
+      "status": "ok",
+      "outcomesCount": 23
+    },
+    {
+      "slug": "visual-and-motion-design-7-10-2025",
+      "status": "ok",
+      "outcomesCount": 15
+    },
+    {
+      "slug": "visual-arts-7-10-2024",
+      "status": "ok",
+      "outcomesCount": 20
+    },
+    {
+      "slug": "work-education-7-10-2025",
+      "status": "ok",
+      "outcomesCount": 23
+    }
+  ],
+  "warnings": []
+}
