@@ -1,419 +1,801 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>NSW Curriculum Outcomes Explorer</title>
-<style>
-  :root {
-    --bg: #101216; --panel: #171a20; --border: #262b34; --text: #dfe3ea;
-    --dim: #8b93a1; --accent: #7aa2f7; --amber: #e0af68; --violet: #9d7cd8;
-    --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  }
-  * { box-sizing: border-box; }
-  body { margin: 0; background: var(--bg); color: var(--text);
-    font: 14px/1.5 system-ui, -apple-system, sans-serif; }
-  header { padding: 14px 20px; border-bottom: 1px solid var(--border);
-    display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
-  header h1 { font-size: 15px; margin: 0; font-weight: 600; }
-  header .sub { color: var(--dim); font-size: 12px; }
-  main { display: grid; grid-template-columns: 300px 1fr; min-height: 70vh; }
-  aside { border-right: 1px solid var(--border); padding: 16px; overflow-y: auto; }
-  .grp { margin-bottom: 18px; }
-  .grp > label { display: block; font-size: 11px; text-transform: uppercase;
-    letter-spacing: .08em; color: var(--dim); margin-bottom: 6px; }
-  input[type=search], select {
-    width: 100%; background: var(--panel); color: var(--text);
-    border: 1px solid var(--border); border-radius: 6px; padding: 7px 9px;
-    font: inherit; outline: none; }
-  input[type=search]:focus, select:focus { border-color: var(--accent); }
-  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
-  .chip { border: 1px solid var(--border); background: var(--panel);
-    color: var(--text); border-radius: 999px; padding: 3px 10px;
-    font-size: 12px; cursor: pointer; }
-  .chip.on { border-color: var(--accent); color: var(--accent); }
-  .seg { display: flex; border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
-  .seg button { flex: 1; background: var(--panel); color: var(--dim); border: 0;
-    padding: 6px 4px; font: inherit; font-size: 12px; cursor: pointer; }
-  .seg button.on { background: #1f2735; color: var(--accent); }
-  .presets { display: flex; gap: 8px; flex-wrap: wrap; align-items: baseline; }
-  .preset { border: 1px dashed var(--border); background: none; color: var(--dim);
-    border-radius: 6px; padding: 4px 10px; font: inherit; font-size: 12px; cursor: pointer; }
-  .preset:hover { color: var(--text); border-color: var(--dim); }
-  section { padding: 16px 20px; overflow-y: auto; }
-  .stats { color: var(--dim); font-size: 12px; margin-bottom: 10px; }
-  .stats b { color: var(--text); }
-  table { border-collapse: collapse; width: 100%; font-size: 13px; }
-  th { text-align: left; color: var(--dim); font-size: 11px; text-transform: uppercase;
-    letter-spacing: .06em; padding: 4px 10px 6px 0; border-bottom: 1px solid var(--border); }
-  td { padding: 7px 10px 7px 0; border-bottom: 1px solid #1c2029; vertical-align: top; }
-  tr:hover td { background: #15181f; }
-  td.code { font-family: var(--mono); color: var(--accent); white-space: nowrap; }
-  td.desc { color: #b9c0cc; max-width: 480px; }
-  .pill { display: inline-block; border: 1px solid var(--border); border-radius: 999px;
-    padding: 0 7px; font-size: 10.5px; color: var(--dim); margin: 1px 3px 1px 0; white-space: nowrap; }
-  .pill.ls { color: var(--amber); border-color: #4a3f27; }
-  .pill.ov { color: var(--violet); border-color: #3d3450; }
-  .syl { white-space: nowrap; }
-  mark { background: #4a3b1f; color: #ffcf7d; border-radius: 3px; padding: 0 2px; }
-  .trunc { color: var(--dim); font-size: 12px; }
-  footer { border-top: 1px solid var(--border); padding: 16px 20px;
-    display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: start; }
-  .promptbox { margin: 0; }
-  .promptbox > label { display: block; font-size: 11px; text-transform: uppercase;
-    letter-spacing: .08em; color: var(--dim); margin-bottom: 6px; }
-  pre#prompt { background: var(--panel); border: 1px solid var(--border);
-    border-radius: 6px; padding: 12px; font: 12px/1.55 var(--mono);
-    white-space: pre-wrap; color: #b9c0cc; margin: 0; max-height: 220px; overflow-y: auto; }
-  .actions { display: flex; flex-direction: column; gap: 8px; }
-  .actions button { background: #1f2735; color: var(--accent); border: 1px solid #2c3d5e;
-    border-radius: 6px; padding: 8px 14px; font: inherit; cursor: pointer; white-space: nowrap; }
-  .actions button:hover { background: #24304a; }
-  .actions button.data { color: var(--amber); border-color: #4a3f27; }
-  .copied { color: var(--dim); font-size: 11px; text-align: center; min-height: 14px; }
-</style>
-</head>
-<body>
-<header>
-  <h1>NSW Curriculum Outcomes Explorer</h1>
-  <span class="sub"><span id="total"></span> outcomes · <span id="sylcount"></span> syllabuses · fetched <span id="fetched"></span> · NESA public data</span>
-  <div class="presets" style="margin-left:auto">
-    <button class="preset" id="p-all">Everything</button>
-    <button class="preset" id="p-maths4">Maths Stage 4</button>
-    <button class="preset" id="p-ls74">Life Skills 7–10</button>
-    <button class="preset" id="p-sci6">Science 11–12</button>
-    <button class="preset" id="p-es1">Early Stage 1</button>
-  </div>
-</header>
-<main>
-  <aside>
-    <div class="grp">
-      <label>Search</label>
-      <input type="search" id="q" placeholder="code, title, or description…">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NSW Curriculum Outcomes Explorer</title>
+    <style>
+      :root {
+        --bg: #101216;
+        --panel: #171a20;
+        --border: #262b34;
+        --text: #dfe3ea;
+        --dim: #8b93a1;
+        --accent: #7aa2f7;
+        --amber: #e0af68;
+        --violet: #9d7cd8;
+        --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font:
+          14px/1.5 system-ui,
+          -apple-system,
+          sans-serif;
+      }
+      header {
+        padding: 14px 20px;
+        border-bottom: 1px solid var(--border);
+        display: flex;
+        align-items: baseline;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+      header h1 {
+        font-size: 15px;
+        margin: 0;
+        font-weight: 600;
+      }
+      header .sub {
+        color: var(--dim);
+        font-size: 12px;
+      }
+      main {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        min-height: 70vh;
+      }
+      aside {
+        border-right: 1px solid var(--border);
+        padding: 16px;
+        overflow-y: auto;
+      }
+      .grp {
+        margin-bottom: 18px;
+      }
+      .grp > label {
+        display: block;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--dim);
+        margin-bottom: 6px;
+      }
+      input[type="search"],
+      select {
+        width: 100%;
+        background: var(--panel);
+        color: var(--text);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        padding: 7px 9px;
+        font: inherit;
+        outline: none;
+      }
+      input[type="search"]:focus,
+      select:focus {
+        border-color: var(--accent);
+      }
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+      .chip {
+        border: 1px solid var(--border);
+        background: var(--panel);
+        color: var(--text);
+        border-radius: 999px;
+        padding: 3px 10px;
+        font-size: 12px;
+        cursor: pointer;
+      }
+      .chip.on {
+        border-color: var(--accent);
+        color: var(--accent);
+      }
+      .seg {
+        display: flex;
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        overflow: hidden;
+      }
+      .seg button {
+        flex: 1;
+        background: var(--panel);
+        color: var(--dim);
+        border: 0;
+        padding: 6px 4px;
+        font: inherit;
+        font-size: 12px;
+        cursor: pointer;
+      }
+      .seg button.on {
+        background: #1f2735;
+        color: var(--accent);
+      }
+      .presets {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        align-items: baseline;
+      }
+      .preset {
+        border: 1px dashed var(--border);
+        background: none;
+        color: var(--dim);
+        border-radius: 6px;
+        padding: 4px 10px;
+        font: inherit;
+        font-size: 12px;
+        cursor: pointer;
+      }
+      .preset:hover {
+        color: var(--text);
+        border-color: var(--dim);
+      }
+      section {
+        padding: 16px 20px;
+        overflow-y: auto;
+      }
+      .stats {
+        color: var(--dim);
+        font-size: 12px;
+        margin-bottom: 10px;
+      }
+      .stats b {
+        color: var(--text);
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        font-size: 13px;
+      }
+      th {
+        text-align: left;
+        color: var(--dim);
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        padding: 4px 10px 6px 0;
+        border-bottom: 1px solid var(--border);
+      }
+      td {
+        padding: 7px 10px 7px 0;
+        border-bottom: 1px solid #1c2029;
+        vertical-align: top;
+      }
+      tr:hover td {
+        background: #15181f;
+      }
+      td.code {
+        font-family: var(--mono);
+        color: var(--accent);
+        white-space: nowrap;
+      }
+      td.desc {
+        color: #b9c0cc;
+        max-width: 480px;
+      }
+      .pill {
+        display: inline-block;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        padding: 0 7px;
+        font-size: 10.5px;
+        color: var(--dim);
+        margin: 1px 3px 1px 0;
+        white-space: nowrap;
+      }
+      .pill.ls {
+        color: var(--amber);
+        border-color: #4a3f27;
+      }
+      .pill.ov {
+        color: var(--violet);
+        border-color: #3d3450;
+      }
+      .syl {
+        white-space: nowrap;
+      }
+      mark {
+        background: #4a3b1f;
+        color: #ffcf7d;
+        border-radius: 3px;
+        padding: 0 2px;
+      }
+      .trunc {
+        color: var(--dim);
+        font-size: 12px;
+      }
+      footer {
+        border-top: 1px solid var(--border);
+        padding: 16px 20px;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 12px;
+        align-items: start;
+      }
+      .promptbox {
+        margin: 0;
+      }
+      .promptbox > label {
+        display: block;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--dim);
+        margin-bottom: 6px;
+      }
+      pre#prompt {
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        padding: 12px;
+        font: 12px/1.55 var(--mono);
+        white-space: pre-wrap;
+        color: #b9c0cc;
+        margin: 0;
+        max-height: 220px;
+        overflow-y: auto;
+      }
+      .actions {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .actions button {
+        background: #1f2735;
+        color: var(--accent);
+        border: 1px solid #2c3d5e;
+        border-radius: 6px;
+        padding: 8px 14px;
+        font: inherit;
+        cursor: pointer;
+        white-space: nowrap;
+      }
+      .actions button:hover {
+        background: #24304a;
+      }
+      .actions button.data {
+        color: var(--amber);
+        border-color: #4a3f27;
+      }
+      .copied {
+        color: var(--dim);
+        font-size: 11px;
+        text-align: center;
+        min-height: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <!--GEN-STRIP-->
+    <div style="background:#5a3a3a;border:2px solid #b06060;color:#ffd9d9;padding:12px 16px;font:14px/1.5 system-ui;margin:0">
+      ⚠ This is the source template, not the playground — it has no data.
+      Run <code>node tools/build-playground.mjs</code> and open <code>playground.html</code> from the repo root.
     </div>
-    <div class="grp">
-      <label>Key learning area</label>
-      <div class="chips" id="klas"></div>
-    </div>
-    <div class="grp">
-      <label>Stage</label>
-      <select id="stage"><option value="">All stages</option></select>
-    </div>
-    <div class="grp">
-      <label>Syllabus</label>
-      <select id="syllabus"><option value="">All syllabuses</option></select>
-    </div>
-    <div class="grp">
-      <label>Type</label>
-      <div class="seg" id="type">
-        <button data-v="all" class="on">All</button>
-        <button data-v="mainstream">Mainstream</button>
-        <button data-v="ls">Life Skills</button>
+    <!--/GEN-STRIP-->
+    <header>
+      <h1>NSW Curriculum Outcomes Explorer</h1>
+      <span class="sub"
+        ><span id="total"></span> outcomes ·
+        <span id="sylcount"></span> syllabuses · fetched
+        <span id="fetched"></span> · NESA public data</span
+      >
+      <div class="presets" style="margin-left: auto">
+        <button class="preset" id="p-all">Everything</button>
+        <button class="preset" id="p-maths4">Maths Stage 4</button>
+        <button class="preset" id="p-ls74">Life Skills 7–10</button>
+        <button class="preset" id="p-sci6">Science 11–12</button>
+        <button class="preset" id="p-es1">Early Stage 1</button>
       </div>
-    </div>
-    <div class="grp">
-      <label>Overarching (e.g. Working Mathematically)</label>
-      <div class="seg" id="ov">
-        <button data-v="any" class="on">Include</button>
-        <button data-v="exclude">Exclude</button>
-        <button data-v="only">Only</button>
+    </header>
+    <main>
+      <aside>
+        <div class="grp">
+          <label>Search</label>
+          <input
+            type="search"
+            id="q"
+            placeholder="code, title, or description…"
+          />
+        </div>
+        <div class="grp">
+          <label>Key learning area</label>
+          <div class="chips" id="klas"></div>
+        </div>
+        <div class="grp">
+          <label>Stage</label>
+          <select id="stage">
+            <option value="">All stages</option>
+          </select>
+        </div>
+        <div class="grp">
+          <label>Syllabus</label>
+          <select id="syllabus">
+            <option value="">All syllabuses</option>
+          </select>
+        </div>
+        <div class="grp">
+          <label>Type</label>
+          <div class="seg" id="type">
+            <button data-v="all" class="on">All</button>
+            <button data-v="mainstream">Mainstream</button>
+            <button data-v="ls">Life Skills</button>
+          </div>
+        </div>
+        <div class="grp">
+          <label>Overarching (e.g. Working Mathematically)</label>
+          <div class="seg" id="ov">
+            <button data-v="any" class="on">Include</button>
+            <button data-v="exclude">Exclude</button>
+            <button data-v="only">Only</button>
+          </div>
+        </div>
+        <div class="grp">
+          <label>Rows shown</label>
+          <select id="limit">
+            <option>50</option>
+            <option selected>100</option>
+            <option>250</option>
+            <option value="99999">All</option>
+          </select>
+        </div>
+      </aside>
+      <section>
+        <div class="stats" id="stats"></div>
+        <table>
+          <thead>
+            <tr>
+              <th>Code</th>
+              <th>Outcome</th>
+              <th>Syllabus</th>
+              <th>Stages</th>
+            </tr>
+          </thead>
+          <tbody id="rows"></tbody>
+        </table>
+        <div class="trunc" id="trunc"></div>
+      </section>
+    </main>
+    <footer>
+      <div class="promptbox">
+        <label>Prompt for ChatGPT — context + schema + your current view</label>
+        <pre id="prompt"></pre>
       </div>
-    </div>
-    <div class="grp">
-      <label>Rows shown</label>
-      <select id="limit">
-        <option>50</option><option selected>100</option><option>250</option><option value="99999">All</option>
-      </select>
-    </div>
-  </aside>
-  <section>
-    <div class="stats" id="stats"></div>
-    <table>
-      <thead><tr><th>Code</th><th>Outcome</th><th>Syllabus</th><th>Stages</th></tr></thead>
-      <tbody id="rows"></tbody>
-    </table>
-    <div class="trunc" id="trunc"></div>
-  </section>
-</main>
-<footer>
-  <div class="promptbox">
-    <label>Prompt for ChatGPT — context + schema + your current view</label>
-    <pre id="prompt"></pre>
-  </div>
-  <div class="actions">
-    <button id="copyprompt">Copy prompt</button>
-    <button class="data" id="copydata">Copy data (JSONL)</button>
-    <div class="copied" id="feedback"></div>
-  </div>
-</footer>
-<script>
-var DATA = __DATA__;
-var GENERATED = "__GENERATED__";
-var TOTAL = __TOTAL__;
-var SYLCOUNT = __SYLCOUNT__;
+      <div class="actions">
+        <button id="copyprompt">Copy prompt</button>
+        <button class="data" id="copydata">Copy data (JSONL)</button>
+        <div class="copied" id="feedback"></div>
+      </div>
+    </footer>
+    <script>
+      var DATA = __DATA__;
+      var GENERATED = "__GENERATED__";
+      var TOTAL = __TOTAL__;
+      var SYLCOUNT = __SYLCOUNT__;
 
-var state = { q: "", kla: "", stage: "", syllabus: "", type: "all", ov: "any", limit: 100 };
-var KLAS = [];
+      var state = {
+        q: "",
+        kla: "",
+        stage: "",
+        syllabus: "",
+        type: "all",
+        ov: "any",
+        limit: 100,
+      };
+      var KLAS = [];
 
-// DOM helpers — everything built with textContent, never innerHTML
-function el(tag, cls, text) {
-  var n = document.createElement(tag);
-  if (cls) n.className = cls;
-  if (text !== undefined && text !== null) n.textContent = String(text);
-  return n;
-}
-function txt(parent, s) { parent.appendChild(document.createTextNode(s)); }
-function escapeRe(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
-function appendHighlighted(parent, text, q) {
-  if (!q) { txt(parent, text); return; }
-  var parts = String(text).split(new RegExp("(" + escapeRe(q) + ")", "gi"));
-  for (var i = 0; i < parts.length; i++) {
-    if (parts[i] === "") continue;
-    if (i % 2 === 1) parent.appendChild(el("mark", null, parts[i]));
-    else txt(parent, parts[i]);
-  }
-}
+      // DOM helpers — everything built with textContent, never innerHTML
+      function el(tag, cls, text) {
+        var n = document.createElement(tag);
+        if (cls) n.className = cls;
+        if (text !== undefined && text !== null) n.textContent = String(text);
+        return n;
+      }
+      function txt(parent, s) {
+        parent.appendChild(document.createTextNode(s));
+      }
+      function escapeRe(s) {
+        return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      }
+      function appendHighlighted(parent, text, q) {
+        if (!q) {
+          txt(parent, text);
+          return;
+        }
+        var parts = String(text).split(
+          new RegExp("(" + escapeRe(q) + ")", "gi"),
+        );
+        for (var i = 0; i < parts.length; i++) {
+          if (parts[i] === "") continue;
+          if (i % 2 === 1) parent.appendChild(el("mark", null, parts[i]));
+          else txt(parent, parts[i]);
+        }
+      }
 
-function filtered() {
-  var q = state.q.toLowerCase();
-  return DATA.filter(function (r) {
-    if (state.kla && r.kla !== state.kla) return false;
-    if (state.stage && r.stages.indexOf(state.stage) === -1) return false;
-    if (state.syllabus && r.syllabusSlug !== state.syllabus) return false;
-    if (state.type === "mainstream" && r.lifeSkills) return false;
-    if (state.type === "ls" && !r.lifeSkills) return false;
-    if (state.ov === "exclude" && r.isOverarching) return false;
-    if (state.ov === "only" && !r.isOverarching) return false;
-    if (q && (r.code + " " + r.title + " " + r.descriptionText).toLowerCase().indexOf(q) === -1) return false;
-    return true;
-  });
-}
+      function filtered() {
+        var q = state.q.toLowerCase();
+        return DATA.filter(function (r) {
+          if (state.kla && r.kla !== state.kla) return false;
+          if (state.stage && r.stages.indexOf(state.stage) === -1) return false;
+          if (state.syllabus && r.syllabusSlug !== state.syllabus) return false;
+          if (state.type === "mainstream" && r.lifeSkills) return false;
+          if (state.type === "ls" && !r.lifeSkills) return false;
+          if (state.ov === "exclude" && r.isOverarching) return false;
+          if (state.ov === "only" && !r.isOverarching) return false;
+          if (
+            q &&
+            (r.code + " " + r.title + " " + r.descriptionText)
+              .toLowerCase()
+              .indexOf(q) === -1
+          )
+            return false;
+          return true;
+        });
+      }
 
-function setSeg(name, val) {
-  state[name] = val;
-  var btns = document.getElementById(name).getElementsByTagName("button");
-  for (var i = 0; i < btns.length; i++) btns[i].className = btns[i].dataset.v === val ? "on" : "";
-  updateAll();
-}
-function setKla(k) {
-  state.kla = state.kla === k ? "" : k;
-  renderKlaChips();
-  updateAll();
-}
-function readControls() {
-  state.q = document.getElementById("q").value.trim();
-  state.limit = Number(document.getElementById("limit").value);
-  state.stage = document.getElementById("stage").value;
-  state.syllabus = document.getElementById("syllabus").value;
-  updateAll();
-}
+      function setSeg(name, val) {
+        state[name] = val;
+        var btns = document.getElementById(name).getElementsByTagName("button");
+        for (var i = 0; i < btns.length; i++)
+          btns[i].className = btns[i].dataset.v === val ? "on" : "";
+        updateAll();
+      }
+      function setKla(k) {
+        state.kla = state.kla === k ? "" : k;
+        renderKlaChips();
+        updateAll();
+      }
+      function readControls() {
+        state.q = document.getElementById("q").value.trim();
+        state.limit = Number(document.getElementById("limit").value);
+        state.stage = document.getElementById("stage").value;
+        state.syllabus = document.getElementById("syllabus").value;
+        updateAll();
+      }
 
-function renderKlaChips() {
-  var box = document.getElementById("klas");
-  box.textContent = "";
-  KLAS.forEach(function (k) {
-    var b = el("button", "chip" + (state.kla === k ? " on" : ""), k);
-    b.type = "button";
-    b.addEventListener("click", function () { setKla(k); });
-    box.appendChild(b);
-  });
-}
+      function renderKlaChips() {
+        var box = document.getElementById("klas");
+        box.textContent = "";
+        KLAS.forEach(function (k) {
+          var b = el("button", "chip" + (state.kla === k ? " on" : ""), k);
+          b.type = "button";
+          b.addEventListener("click", function () {
+            setKla(k);
+          });
+          box.appendChild(b);
+        });
+      }
 
-function describeFilter() {
-  var p = [];
-  if (state.q) p.push('matching "' + state.q + '"');
-  if (state.kla) p.push(state.kla + " (KLA)");
-  if (state.stage) p.push(state.stage);
-  if (state.syllabus) {
-    var s = null;
-    for (var i = 0; i < DATA.length; i++) if (DATA[i].syllabusSlug === state.syllabus) { s = DATA[i].syllabus; break; }
-    p.push("syllabus " + (s || state.syllabus));
-  }
-  if (state.type === "mainstream") p.push("mainstream only");
-  if (state.type === "ls") p.push("Life Skills only");
-  if (state.ov === "only") p.push("overarching outcomes only");
-  if (state.ov === "exclude") p.push("overarching outcomes excluded");
-  return p.length ? p.join(", ") : "no filters, the whole catalog";
-}
+      function describeFilter() {
+        var p = [];
+        if (state.q) p.push('matching "' + state.q + '"');
+        if (state.kla) p.push(state.kla + " (KLA)");
+        if (state.stage) p.push(state.stage);
+        if (state.syllabus) {
+          var s = null;
+          for (var i = 0; i < DATA.length; i++)
+            if (DATA[i].syllabusSlug === state.syllabus) {
+              s = DATA[i].syllabus;
+              break;
+            }
+          p.push("syllabus " + (s || state.syllabus));
+        }
+        if (state.type === "mainstream") p.push("mainstream only");
+        if (state.type === "ls") p.push("Life Skills only");
+        if (state.ov === "only") p.push("overarching outcomes only");
+        if (state.ov === "exclude") p.push("overarching outcomes excluded");
+        return p.length ? p.join(", ") : "no filters, the whole catalog";
+      }
 
-function updateAll() {
-  var rows = filtered();
-  var n = rows.length;
-  var shown = rows.slice(0, state.limit);
+      function updateAll() {
+        var rows = filtered();
+        var n = rows.length;
+        var shown = rows.slice(0, state.limit);
 
-  var dist = {};
-  rows.forEach(function (r) { dist[r.syllabus] = (dist[r.syllabus] || 0) + 1; });
-  var distKeys = Object.keys(dist);
-  var top = distKeys.slice().sort(function (a, b) { return dist[b] - dist[a]; }).slice(0, 3);
+        var dist = {};
+        rows.forEach(function (r) {
+          dist[r.syllabus] = (dist[r.syllabus] || 0) + 1;
+        });
+        var distKeys = Object.keys(dist);
+        var top = distKeys
+          .slice()
+          .sort(function (a, b) {
+            return dist[b] - dist[a];
+          })
+          .slice(0, 3);
 
-  // stats line
-  var st = document.getElementById("stats");
-  st.textContent = "";
-  txt(st, "Showing "); st.appendChild(el("b", null, shown.length));
-  txt(st, " of "); st.appendChild(el("b", null, TOTAL));
-  txt(st, " outcomes · " + n + " match · ");
-  if (top.length) {
-    top.forEach(function (s, i) {
-      if (i) txt(st, ", ");
-      txt(st, s + " (" + dist[s] + ")");
-    });
-    if (distKeys.length > 3) txt(st, ", +" + (distKeys.length - 3) + " more");
-  } else txt(st, "none");
+        // stats line
+        var st = document.getElementById("stats");
+        st.textContent = "";
+        txt(st, "Showing ");
+        st.appendChild(el("b", null, shown.length));
+        txt(st, " of ");
+        st.appendChild(el("b", null, TOTAL));
+        txt(st, " outcomes · " + n + " match · ");
+        if (top.length) {
+          top.forEach(function (s, i) {
+            if (i) txt(st, ", ");
+            txt(st, s + " (" + dist[s] + ")");
+          });
+          if (distKeys.length > 3)
+            txt(st, ", +" + (distKeys.length - 3) + " more");
+        } else txt(st, "none");
 
-  // table
-  var tbody = document.getElementById("rows");
-  tbody.textContent = "";
-  if (!shown.length) {
-    var tr0 = el("tr"), td0 = el("td", "trunc", "No outcomes match.");
-    td0.colSpan = 4; tr0.appendChild(td0); tbody.appendChild(tr0);
-  }
-  shown.forEach(function (r) {
-    var tr = el("tr");
-    var tdCode = el("td", "code");
-    appendHighlighted(tdCode, r.code, state.q);
-    var tdOut = el("td", "desc");
-    if (r.title) {
-      var b = el("b");
-      appendHighlighted(b, r.title, state.q);
-      tdOut.appendChild(b); tdOut.appendChild(el("br"));
-    }
-    var d = r.descriptionText;
-    if (d.length > 220) d = d.slice(0, 220) + "…";
-    appendHighlighted(tdOut, d, state.q);
-    var tdSyl = el("td", "syl");
-    txt(tdSyl, r.syllabus + " ");
-    tdSyl.appendChild(el("span", "trunc", "(" + r.syllabusYear + ")"));
-    var tdSt = el("td");
-    r.stages.forEach(function (s) { tdSt.appendChild(el("span", "pill", s)); });
-    if (r.lifeSkills) tdSt.appendChild(el("span", "pill ls", "LS"));
-    if (r.isOverarching) tdSt.appendChild(el("span", "pill ov", "overarching"));
-    tr.appendChild(tdCode); tr.appendChild(tdOut); tr.appendChild(tdSyl); tr.appendChild(tdSt);
-    tbody.appendChild(tr);
-  });
-  document.getElementById("trunc").textContent =
-    n > shown.length ? "…" + (n - shown.length) + " more rows not shown (copy data gets all " + n + ")" : "";
+        // table
+        var tbody = document.getElementById("rows");
+        tbody.textContent = "";
+        if (!shown.length) {
+          var tr0 = el("tr"),
+            td0 = el("td", "trunc", "No outcomes match.");
+          td0.colSpan = 4;
+          tr0.appendChild(td0);
+          tbody.appendChild(tr0);
+        }
+        shown.forEach(function (r) {
+          var tr = el("tr");
+          var tdCode = el("td", "code");
+          appendHighlighted(tdCode, r.code, state.q);
+          var tdOut = el("td", "desc");
+          if (r.title) {
+            var b = el("b");
+            appendHighlighted(b, r.title, state.q);
+            tdOut.appendChild(b);
+            tdOut.appendChild(el("br"));
+          }
+          var d = r.descriptionText;
+          if (d.length > 220) d = d.slice(0, 220) + "…";
+          appendHighlighted(tdOut, d, state.q);
+          var tdSyl = el("td", "syl");
+          txt(tdSyl, r.syllabus + " ");
+          tdSyl.appendChild(el("span", "trunc", "(" + r.syllabusYear + ")"));
+          var tdSt = el("td");
+          r.stages.forEach(function (s) {
+            tdSt.appendChild(el("span", "pill", s));
+          });
+          if (r.lifeSkills) tdSt.appendChild(el("span", "pill ls", "LS"));
+          if (r.isOverarching)
+            tdSt.appendChild(el("span", "pill ov", "overarching"));
+          tr.appendChild(tdCode);
+          tr.appendChild(tdOut);
+          tr.appendChild(tdSyl);
+          tr.appendChild(tdSt);
+          tbody.appendChild(tr);
+        });
+        document.getElementById("trunc").textContent =
+          n > shown.length
+            ? "…" +
+              (n - shown.length) +
+              " more rows not shown (copy data gets all " +
+              n +
+              ")"
+            : "";
 
-  // ChatGPT handoff prompt
-  var subset = n <= 12
-    ? "The subset: " + rows.map(function (r) { return r.code; }).join(", ") + "."
-    : "The subset spans " + (distKeys.length === 1 ? "1 syllabus" : distKeys.length + " syllabuses") + "; largest: " +
-      top.map(function (s) { return s + " (" + dist[s] + ")"; }).join(", ") + ".";
-  document.getElementById("prompt").textContent =
-    "You are helping me explore NSW school curriculum learning-outcomes data (NESA, curriculum.nsw.edu.au).\n\n" +
-    "Context: the full catalog has " + TOTAL + " outcome records across " + SYLCOUNT + " syllabuses (all 8 key learning areas, K-10 and 11-12, mainstream and Life Skills), fetched " + GENERATED + " from NESA's public outcomes pages.\n\n" +
-    "I am pasting a filtered subset of " + n + " records right after this message, as JSONL (one JSON object per line). Schema per record:\n" +
-    "- code: official NESA outcome code, e.g. \"MAO-WM-01\"\n" +
-    "- title: short title, often empty on 11-12 outcomes\n" +
-    "- descriptionText: the outcome statement in plain text\n" +
-    "- lifeSkills: true for Life Skills outcomes\n" +
-    "- isOverarching: true if the outcome spans all stages of its syllabus (e.g. Working Mathematically)\n" +
-    "- stages: array of stages it applies to, e.g. [\"Stage 4\",\"Stage 5\"]\n" +
-    "- relatedLifeSkillsOutcomeCodes: for mainstream outcomes, codes of linked Life Skills outcomes\n" +
-    "- syllabus, syllabusSlug, syllabusYear: syllabus name, slug, publication year\n" +
-    "- kla: key learning area\n\n" +
-    "Current view: " + describeFilter() + ". " + subset + "\n\n" +
-    "Confirm you can read the JSONL (say the record count you see), then I will ask my questions.";
+        // ChatGPT handoff prompt
+        var subset =
+          n <= 12
+            ? "The subset: " +
+              rows
+                .map(function (r) {
+                  return r.code;
+                })
+                .join(", ") +
+              "."
+            : "The subset spans " +
+              (distKeys.length === 1
+                ? "1 syllabus"
+                : distKeys.length + " syllabuses") +
+              "; largest: " +
+              top
+                .map(function (s) {
+                  return s + " (" + dist[s] + ")";
+                })
+                .join(", ") +
+              ".";
+        document.getElementById("prompt").textContent =
+          "You are helping me explore NSW school curriculum learning-outcomes data (NESA, curriculum.nsw.edu.au).\n\n" +
+          "Context: the full catalog has " +
+          TOTAL +
+          " outcome records across " +
+          SYLCOUNT +
+          " syllabuses (all 8 key learning areas, K-10 and 11-12, mainstream and Life Skills), fetched " +
+          GENERATED +
+          " from NESA's public outcomes pages.\n\n" +
+          "I am pasting a filtered subset of " +
+          n +
+          " records right after this message, as JSONL (one JSON object per line). Schema per record:\n" +
+          '- code: official NESA outcome code, e.g. "MAO-WM-01"\n' +
+          "- title: short title, often empty on 11-12 outcomes\n" +
+          "- descriptionText: the outcome statement in plain text\n" +
+          "- lifeSkills: true for Life Skills outcomes\n" +
+          "- isOverarching: true if the outcome spans all stages of its syllabus (e.g. Working Mathematically)\n" +
+          '- stages: array of stages it applies to, e.g. ["Stage 4","Stage 5"]\n' +
+          "- relatedLifeSkillsOutcomeCodes: for mainstream outcomes, codes of linked Life Skills outcomes\n" +
+          "- syllabus, syllabusSlug, syllabusYear: syllabus name, slug, publication year\n" +
+          "- kla: key learning area\n\n" +
+          "Current view: " +
+          describeFilter() +
+          ". " +
+          subset +
+          "\n\n" +
+          "Confirm you can read the JSONL (say the record count you see), then I will ask my questions.";
 
-  document.getElementById("copydata").textContent = "Copy data (" + n + " rows)";
-}
+        document.getElementById("copydata").textContent =
+          "Copy data (" + n + " rows)";
+      }
 
-function copy(text, msg) {
-  var shown = false;
-  function done() {
-    if (shown) return;
-    shown = true;
-    var f = document.getElementById("feedback");
-    f.textContent = msg;
-    setTimeout(function () { f.textContent = ""; }, 1600);
-  }
-  // execCommand first: synchronous, works from file:// pages on a real click gesture.
-  // clipboard API can hang pending a permission prompt, so it is only a fallback.
-  var ok = false;
-  try {
-    var ta = document.createElement("textarea");
-    ta.value = text;
-    ta.style.position = "fixed";
-    ta.style.opacity = "0";
-    document.body.appendChild(ta);
-    ta.focus();
-    ta.select();
-    ok = document.execCommand("copy");
-    document.body.removeChild(ta);
-  } catch (e) {}
-  if (ok) { done(); return; }
-  if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(text).then(done, function () { done(); });
-    setTimeout(done, 800);
-  } else done();
-}
+      function copy(text, msg) {
+        var shown = false;
+        function done() {
+          if (shown) return;
+          shown = true;
+          var f = document.getElementById("feedback");
+          f.textContent = msg;
+          setTimeout(function () {
+            f.textContent = "";
+          }, 1600);
+        }
+        // execCommand first: synchronous, works from file:// pages on a real click gesture.
+        // clipboard API can hang pending a permission prompt, so it is only a fallback.
+        var ok = false;
+        try {
+          var ta = document.createElement("textarea");
+          ta.value = text;
+          ta.style.position = "fixed";
+          ta.style.opacity = "0";
+          document.body.appendChild(ta);
+          ta.focus();
+          ta.select();
+          ok = document.execCommand("copy");
+          document.body.removeChild(ta);
+        } catch (e) {}
+        if (ok) {
+          done();
+          return;
+        }
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(done, function () {
+            done();
+          });
+          setTimeout(done, 800);
+        } else done();
+      }
 
-function applyPreset(name) {
-  state = { q: "", kla: "", stage: "", syllabus: "", type: "all", ov: "any", limit: state.limit };
-  if (name === "maths4") { state.kla = "Mathematics"; state.stage = "Stage 4"; }
-  if (name === "ls74") { state.type = "ls"; state.stage = "Stage 4"; }
-  if (name === "sci6") { state.kla = "Science"; state.stage = "Stage 6"; }
-  if (name === "es1") { state.stage = "Early Stage 1"; }
-  document.getElementById("q").value = "";
-  document.getElementById("stage").value = state.stage;
-  document.getElementById("syllabus").value = "";
-  ["type", "ov"].forEach(function (seg) {
-    var btns = document.getElementById(seg).getElementsByTagName("button");
-    for (var i = 0; i < btns.length; i++) btns[i].className = btns[i].dataset.v === state[seg] ? "on" : "";
-  });
-  renderKlaChips();
-  updateAll();
-}
+      function applyPreset(name) {
+        state = {
+          q: "",
+          kla: "",
+          stage: "",
+          syllabus: "",
+          type: "all",
+          ov: "any",
+          limit: state.limit,
+        };
+        if (name === "maths4") {
+          state.kla = "Mathematics";
+          state.stage = "Stage 4";
+        }
+        if (name === "ls74") {
+          state.type = "ls";
+          state.stage = "Stage 4";
+        }
+        if (name === "sci6") {
+          state.kla = "Science";
+          state.stage = "Stage 6";
+        }
+        if (name === "es1") {
+          state.stage = "Early Stage 1";
+        }
+        document.getElementById("q").value = "";
+        document.getElementById("stage").value = state.stage;
+        document.getElementById("syllabus").value = "";
+        ["type", "ov"].forEach(function (seg) {
+          var btns = document
+            .getElementById(seg)
+            .getElementsByTagName("button");
+          for (var i = 0; i < btns.length; i++)
+            btns[i].className = btns[i].dataset.v === state[seg] ? "on" : "";
+        });
+        renderKlaChips();
+        updateAll();
+      }
 
-// ---- init ----
-DATA.forEach(function (r) { if (KLAS.indexOf(r.kla) === -1) KLAS.push(r.kla); });
-KLAS.sort();
-document.getElementById("total").textContent = TOTAL;
-document.getElementById("sylcount").textContent = SYLCOUNT;
-document.getElementById("fetched").textContent = GENERATED;
+      // ---- init ----
+      DATA.forEach(function (r) {
+        if (KLAS.indexOf(r.kla) === -1) KLAS.push(r.kla);
+      });
+      KLAS.sort();
+      document.getElementById("total").textContent = TOTAL;
+      document.getElementById("sylcount").textContent = SYLCOUNT;
+      document.getElementById("fetched").textContent = GENERATED;
 
-["Early Stage 1", "Stage 1", "Stage 2", "Stage 3", "Stage 4", "Stage 5", "Stage 6"].forEach(function (s) {
-  var o = document.createElement("option"); o.value = s; o.textContent = s;
-  document.getElementById("stage").appendChild(o);
-});
+      [
+        "Early Stage 1",
+        "Stage 1",
+        "Stage 2",
+        "Stage 3",
+        "Stage 4",
+        "Stage 5",
+        "Stage 6",
+      ].forEach(function (s) {
+        var o = document.createElement("option");
+        o.value = s;
+        o.textContent = s;
+        document.getElementById("stage").appendChild(o);
+      });
 
-var byKla = {};
-DATA.forEach(function (r) {
-  if (!byKla[r.kla]) byKla[r.kla] = {};
-  byKla[r.kla][r.syllabusSlug] = r.syllabus + " (" + r.syllabusYear + ")";
-});
-Object.keys(byKla).sort().forEach(function (kla) {
-  var g = document.createElement("optgroup"); g.label = kla;
-  Object.keys(byKla[kla]).sort(function (a, b) {
-    return byKla[kla][a].localeCompare(byKla[kla][b]);
-  }).forEach(function (slug) {
-    var o = document.createElement("option");
-    o.value = slug; o.textContent = byKla[kla][slug]; g.appendChild(o);
-  });
-  document.getElementById("syllabus").appendChild(g);
-});
+      var byKla = {};
+      DATA.forEach(function (r) {
+        if (!byKla[r.kla]) byKla[r.kla] = {};
+        byKla[r.kla][r.syllabusSlug] = r.syllabus + " (" + r.syllabusYear + ")";
+      });
+      Object.keys(byKla)
+        .sort()
+        .forEach(function (kla) {
+          var g = document.createElement("optgroup");
+          g.label = kla;
+          Object.keys(byKla[kla])
+            .sort(function (a, b) {
+              return byKla[kla][a].localeCompare(byKla[kla][b]);
+            })
+            .forEach(function (slug) {
+              var o = document.createElement("option");
+              o.value = slug;
+              o.textContent = byKla[kla][slug];
+              g.appendChild(o);
+            });
+          document.getElementById("syllabus").appendChild(g);
+        });
 
-["q", "stage", "syllabus", "limit"].forEach(function (id) {
-  document.getElementById(id).addEventListener("input", readControls);
-  document.getElementById(id).addEventListener("change", readControls);
-});
-["type", "ov"].forEach(function (seg) {
-  var btns = document.getElementById(seg).getElementsByTagName("button");
-  for (var i = 0; i < btns.length; i++)
-    btns[i].addEventListener("click", function () { setSeg(seg, this.dataset.v); });
-});
-[["p-all", "all"], ["p-maths4", "maths4"], ["p-ls74", "ls74"], ["p-sci6", "sci6"], ["p-es1", "es1"]]
-  .forEach(function (pair) {
-    document.getElementById(pair[0]).addEventListener("click", function () { applyPreset(pair[1]); });
-  });
-document.getElementById("copyprompt").addEventListener("click", function () {
-  copy(document.getElementById("prompt").textContent, "prompt copied");
-});
-document.getElementById("copydata").addEventListener("click", function () {
-  copy(filtered().map(function (r) { return JSON.stringify(r); }).join("\n"), "data copied");
-});
+      ["q", "stage", "syllabus", "limit"].forEach(function (id) {
+        document.getElementById(id).addEventListener("input", readControls);
+        document.getElementById(id).addEventListener("change", readControls);
+      });
+      ["type", "ov"].forEach(function (seg) {
+        var btns = document.getElementById(seg).getElementsByTagName("button");
+        for (var i = 0; i < btns.length; i++)
+          btns[i].addEventListener("click", function () {
+            setSeg(seg, this.dataset.v);
+          });
+      });
+      [
+        ["p-all", "all"],
+        ["p-maths4", "maths4"],
+        ["p-ls74", "ls74"],
+        ["p-sci6", "sci6"],
+        ["p-es1", "es1"],
+      ].forEach(function (pair) {
+        document.getElementById(pair[0]).addEventListener("click", function () {
+          applyPreset(pair[1]);
+        });
+      });
+      document
+        .getElementById("copyprompt")
+        .addEventListener("click", function () {
+          copy(document.getElementById("prompt").textContent, "prompt copied");
+        });
+      document
+        .getElementById("copydata")
+        .addEventListener("click", function () {
+          copy(
+            filtered()
+              .map(function (r) {
+                return JSON.stringify(r);
+              })
+              .join("\n"),
+            "data copied",
+          );
+        });
 
-renderKlaChips();
-updateAll();
-</script>
-</body>
+      renderKlaChips();
+      updateAll();
+    </script>
+  </body>
 </html>
