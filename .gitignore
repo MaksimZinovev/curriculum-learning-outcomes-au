@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+
+# tooling indexes / local state
+.ck/
+.pi/
+.ckignore
+
+# dependencies & build
+node_modules/
+dist/
+*.log
+
+# env & secrets
+.env
+.env.*
+
+# scratch
+tmp/
