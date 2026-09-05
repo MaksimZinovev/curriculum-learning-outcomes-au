@@ -4,6 +4,7 @@ NSW (NESA) curriculum learning outcomes as structured data. `sync.mjs` fetches e
 
 - run locally: `node sync.mjs` (Node 22+, zero deps)
 - run manually: Actions tab → sync → Run workflow
+- explore the data: `node tools/build-playground.mjs`, then open `playground.html` (single file, gitignored)
 - design, spec, decisions: `shaping/`
 
 Private repo on purpose: the content is NESA Crown copyright and the licence excludes redistribution by tutoring companies.

@@ -5,4 +5,5 @@ GitHub Actions runs it monthly and on manual dispatch; each run leaves a raw-pay
 Repo is private (MaksimZinovev/curriculum-learning-outcomes-au), `.git` is 6.5MB, raw payloads never enter git.
 Validation tested: a >10% total drop aborts with no writes; a failed fetch keeps last-known rows flagged stale.
 Docs live in `shaping/`: MVP spec (final), payload probe, ADR 0001 (dedupe + back-ref fallback).
+Data explorer: `node tools/build-playground.mjs` → `playground.html` (single file, gitignored) — filters, search, presets, ChatGPT handoff prompt + JSONL copy.
 Next: Scoolendar ingest/search against `outcomes.jsonl`; matching old free-text codes (PD3-4 style) is a documented gap for that phase.

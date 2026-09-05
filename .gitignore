@@ -18,3 +18,6 @@ dist/
 # scratch
 tmp/
 data/raw/
+
+# derived, regenerate with: node tools/build-playground.mjs
+playground.html
