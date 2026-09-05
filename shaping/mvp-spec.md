@@ -1,6 +1,6 @@
 # Spec: NSW Curriculum Outcomes Sync — MVP
 
-**Status:** all 4 decisions settled (raw storage awaiting your nod) · **Source:** grill rounds 1–2, recon in `nsw-curriculum-outcomes-recon.md`
+**Status:** final · v1 shipped 2026-09-05 (1682 outcomes, 81 syllabuses) · **Source:** grill rounds 1–2, recon in `nsw-curriculum-outcomes-recon.md`
 
 ## Goal
 
