@@ -16,7 +16,7 @@ syllabus outcomes pages on curriculum.nsw.edu.au and commits `data/*.jsonl` week
 ## Who is this for
 
 - Developers building education tools on the NSW curriculum. Today that is
-  [Scoolendar](https://github.com/MaksimZinovev/groundcrew-scoolendar-private),
+  [Scoolendar](https://scoolendar.com/),
   which needs outcomes as selectable records instead of scraping NESA pages or
   matching free-text codes.
 - Regular users who want to explore the NSW curriculum outcomes without
