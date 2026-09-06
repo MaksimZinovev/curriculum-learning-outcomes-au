@@ -19,6 +19,10 @@ jobs:
       - name: run sync
         run: node tools/sync.mjs
 
+      # refresh the README record-count badge
+      - name: update count badge
+        run: node tools/build-count-badge.mjs
+
       # audit trail: exact raw payloads served by NESA for this run, ~90 days
       - name: upload raw payloads
         if: always()
@@ -28,12 +32,16 @@ jobs:
           path: data/raw/
           retention-days: 90
 
-      # commits only when data changed; a gate abort (exit 1) skips this step
-      - name: commit refreshed data
+      # commits data or badge changes; a gate abort (exit 1) skips this step
+      - name: commit refreshed data and badge
         if: success()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/
-          git diff --cached --quiet || git commit -m "sync: refresh data"
+          git add data/ assets/
+          if git diff --cached --quiet; then
+            echo "no changes to commit"
+          else
+            git commit -m "sync: refresh data and badge"
+          fi
           git push

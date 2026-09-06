@@ -2,6 +2,8 @@
 
 [![sync](https://github.com/MaksimZinovev/curriculum-learning-outcomes-au/actions/workflows/sync.yml/badge.svg)](https://github.com/MaksimZinovev/curriculum-learning-outcomes-au/actions/workflows/sync.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+<br>
+[![Record count](assets/count.svg)](data/outcomes.jsonl)
 
 <p align="center">
   <img src="assets/screenshot.png" alt="NSW Curriculum Outcomes Explorer" width="1000">
@@ -13,10 +15,12 @@ syllabus outcomes pages on curriculum.nsw.edu.au and commits `data/*.jsonl` mont
 
 ## Who is this for
 
-Developers building education tools on the NSW curriculum. Today that is
-[Scoolendar](https://github.com/MaksimZinovev/groundcrew-scoolendar-private),
-which needs outcomes as selectable records instead of scraping NESA pages or
-matching free-text codes.
+- Developers building education tools on the NSW curriculum. Today that is
+  [Scoolendar](https://github.com/MaksimZinovev/groundcrew-scoolendar-private),
+  which needs outcomes as selectable records instead of scraping NESA pages or
+  matching free-text codes.
+- Regular users who want to explore the NSW curriculum outcomes without
+  diving into the raw data.
 
 ## What it does
 
@@ -27,6 +31,7 @@ data. Raw payloads of each run go to a 90-day artifact, outside git.
 
 ### Dedupe and guardrails
 
+NESA's CMS mirrors some outcomes across syllabus sections; the sync emits
 each record once, keyed by CMS codename
 ([ADR 0001](shaping/adr/0001-dedupe-outcomes-by-codename.md)). A >10% drop in
 totals aborts with no writes; a failed fetch keeps last-known rows, flagged
@@ -55,7 +60,7 @@ run()
 ```
 
 ```mermaid
-flowchart LR
+flowchart TD
     N["NESA"] -->|"81 endpoints"| S["tools/sync.mjs"]
     S -->|"dedupe · gate"| D["data/*.jsonl"]
     D -->|"bot commit"| M["main"]
