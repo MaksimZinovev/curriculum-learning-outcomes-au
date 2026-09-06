@@ -10,7 +10,7 @@
 </p>
 
 The NSW (NESA) curriculum as structured data. `tools/sync.mjs` fetches all 81
-syllabus outcomes pages on curriculum.nsw.edu.au and commits `data/*.jsonl` monthly via Actions. A single-file explorer serves it at
+syllabus outcomes pages on curriculum.nsw.edu.au and commits `data/*.jsonl` weekly via Actions. A single-file explorer serves it at
 [github.io](https://maksimzinovev.github.io/curriculum-learning-outcomes-au/).
 
 ## Who is this for
@@ -24,9 +24,9 @@ syllabus outcomes pages on curriculum.nsw.edu.au and commits `data/*.jsonl` mont
 
 ## What it does
 
-### Monthly sync
+### Weekly sync
 
-Actions runs the sync on the 2nd of each month and bot-commits refreshed
+Actions runs the sync every Sunday and bot-commits refreshed
 data. Raw payloads of each run go to a 90-day artifact, outside git.
 
 ### Dedupe and guardrails
@@ -109,7 +109,7 @@ fields; line 1 of the JSONL is a full record.
 ├── docs/                     # NESA source PDFs, sample tutoring report
 ├── shaping/                  # design docs: spec, recon, probe, ADRs
 ├── tools/                    # sync.mjs, build-playground.mjs, template
-└── .github/workflows/        # sync.yml (monthly), pages.yml (Pages)
+└── .github/workflows/        # sync.yml (weekly), pages.yml (Pages)
 ```
 
 ## Reuse
@@ -121,7 +121,7 @@ discovery logic in `tools/sync.mjs`. No secrets, no config.
 
 **Done**
 
-- Monthly sync: 1682 outcomes, 81 syllabuses, ~4s fetch
+- Weekly sync: 1682 outcomes, 81 syllabuses, ~4s fetch
 - Dedupe, gate, and stale handling tested; explorer live on GitHub Pages
 
 **Planned**
