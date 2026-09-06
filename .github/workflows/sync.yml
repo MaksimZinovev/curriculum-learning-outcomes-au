@@ -39,5 +39,6 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/ assets/
-          git diff --cached --quiet || git commit -m "sync: refresh data"
+          git diff --cached --quiet
+          || git commit -m "sync: refresh data and badge"
           git push
