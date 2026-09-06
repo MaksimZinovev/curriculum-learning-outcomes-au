@@ -32,8 +32,8 @@ jobs:
           path: data/raw/
           retention-days: 90
 
-      # commits only when data changed; a gate abort (exit 1) skips this step
-      - name: commit refreshed data
+      # commits data or badge changes; a gate abort (exit 1) skips this step
+      - name: commit refreshed data and badge
         if: success()
         run: |
           git config user.name "github-actions[bot]"
