@@ -19,6 +19,10 @@ jobs:
       - name: run sync
         run: node tools/sync.mjs
 
+      # refresh the README record-count badge
+      - name: update count badge
+        run: node tools/build-count-badge.mjs
+
       # audit trail: exact raw payloads served by NESA for this run, ~90 days
       - name: upload raw payloads
         if: always()
@@ -34,6 +38,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/
+          git add data/ assets/
           git diff --cached --quiet || git commit -m "sync: refresh data"
           git push
