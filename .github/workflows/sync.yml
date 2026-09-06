@@ -17,7 +17,7 @@ jobs:
           node-version: 22
 
       - name: run sync
-        run: node sync.mjs
+        run: node tools/sync.mjs
 
       # audit trail: exact raw payloads served by NESA for this run, ~90 days
       - name: upload raw payloads
@@ -35,5 +35,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/
-          git diff --cached --quiet || git commit -m "sync: refresh outcomes data"
+          git diff --cached --quiet || git commit -m "sync: refresh data"
           git push

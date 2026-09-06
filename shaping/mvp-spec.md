@@ -16,8 +16,8 @@ Fetch all NESA learning outcomes as structured data into this repo, committed as
 | 4 | Old-format codes (`PD3-4`) | **Out of scope** — known gap, documented |
 | 6 | Description | Both `descriptionHtml` (raw, incl. MathML) + `descriptionText` (stripped) |
 | 7 | Validation | Only a **>10% total drop aborts**; individual fetch failures = warning + auditable |
-| 8 | Runtime | Plain `sync.mjs`, Node 22 built-in fetch, zero deps |
-| 9 | Schedule | GitHub remote + Actions cron **now**, plus manual `node sync.mjs` |
+| 8 | Runtime | Plain `tools/sync.mjs`, Node 22 built-in fetch, zero deps |
+| 9 | Schedule | GitHub remote + Actions cron **now**, plus manual `node tools/sync.mjs` |
 | 10 | Layout | Single `data/outcomes.jsonl` + `data/syllabuses.json` + gitignored `data/raw/` (last snapshot only) |
 
 ## Pipeline
